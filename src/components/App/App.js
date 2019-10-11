@@ -5,11 +5,11 @@ import HeaderApp from "../HeaderApp";
 import Home from "../Home";
 import Portfolio from "../Portfolio";
 import Skills from "../Skills";
-import About from "../Home";
+// import About from "../Home";
 import Contacts from "../Contacts";
 import { styles } from "./particlesOptions";
-import "./App.css";
 import options from "./particlesOptions";
+import "./App.css";
 
 class App extends Component {
   render() {

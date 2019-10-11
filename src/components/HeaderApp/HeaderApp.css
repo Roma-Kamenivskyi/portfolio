@@ -1,11 +1,8 @@
 .header-app {
-  padding: 20px 0;
-  background-image: linear-gradient(
-    45deg,
-    rgba(51, 51, 51, 0.9),
-    rgba(204, 204, 204, 0.5)
-  );
-  box-shadow: 0px 6px 6px rgba(44, 46, 67, 0.5);
+  padding: 5px 0;
+  /* background-image: linear-gradient(45deg, #ff8000, #222222); */
+  background-color: #ffffff;
+  box-shadow: 0px 1px 7px #cccccc;
   margin-bottom: 50px;
 }
 .navbar-app {
@@ -14,6 +11,12 @@
   justify-content: space-between;
   font-family: "Montserrat";
 }
+.logo,
+.links-list li a {
+  color: #222222;
+  font-weight: 600;
+  text-transform: capitalize;
+}
 .links-list {
   display: flex;
   align-items: center;
@@ -21,8 +24,40 @@
 }
 .links-list li {
   margin-left: 20px;
-  text-transform: uppercase;
 }
-.links-list li a {
-  font-weight: 500;
+.link {
+  position: relative;
+  transition: 0.2s ease;
+}
+.link::before,
+.link::after {
+  transition: 0.3s ease;
+}
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: #ff8000;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0%;
+  background-color: black;
+  transition-delay: 0.3s;
+}
+.link:hover {
+  letter-spacing: 2px;
+}
+.link:hover.link::after {
+  width: 50%;
+}
+.link:hover.link::before {
+  width: 50%;
 }

@@ -1,0 +1,19 @@
+{
+  "works": [
+    {
+      "title": "Joby",
+      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, JavaScript"
+    },
+    {
+      "title": "Blue Rex",
+      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, bootstrap 4, jQuery"
+    },
+    {
+      "title": "Tourist",
+      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, jQuery"
+    }
+  ]
+}

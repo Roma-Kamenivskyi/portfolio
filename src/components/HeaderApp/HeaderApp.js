@@ -1,25 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HeaderApp.css";
+import logo from "./logo.png";
 
 const HeaderApp = () => {
   return (
     <header className="header-app">
       <div className="wrapper">
         <nav className="navbar-app">
-          <Link to="/">Logo</Link>
+          <Link to="/" className="logo">
+            <img src={logo} alt="logo" />
+          </Link>
           <ul className="links-list">
             <li>
-              <Link to="/home">Home</Link>
+              <Link className="link" to="/home">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/portfolio">Portfolio</Link>
+              <Link className="link" to="/portfolio">
+                Portfolio
+              </Link>
             </li>
             <li>
-              <Link to="/skills">Skills</Link>
+              <Link className="link" to="/skills">
+                Skills
+              </Link>
             </li>
             <li>
-              <Link to="/contacts">Contacts</Link>
+              <Link className="link" to="/contacts">
+                Contacts
+              </Link>
             </li>
           </ul>
         </nav>
