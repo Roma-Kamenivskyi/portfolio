@@ -1,0 +1,19 @@
+.name {
+  font-size: 70px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: url(https://glavcom.ua/img/article/5424/25_main.jpg);
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.name-top {
+  display: block;
+  text-align: left;
+}
+.name-top::after {
+}
+.name-bottom {
+  display: block;
+  text-align: right;
+}
