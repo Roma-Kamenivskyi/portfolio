@@ -13,7 +13,7 @@ const HeaderApp = () => {
           </Link>
           <ul className="links-list">
             <li>
-              <Link className="link" to="/home">
+              <Link className="link" to="">
                 Home
               </Link>
             </li>

@@ -5,25 +5,36 @@ class Portfolio extends Component {
   state = {
     works: []
   };
-  async componentDidMount() {
-    await fetch("../../../db/works.json")
+  componentDidMount() {
+    fetch(
+      "https://raw.githubusercontent.com/Roma-Kamenivskyi/portfolio/master/src/db/works.json"
+    )
       .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
+      .then(res =>
+        this.setState(() => {
+          return {
+            works: res.works
+          };
+        })
+      )
+      .catch(err => console.log("error: ", err));
   }
   render() {
+    const { works } = this.state;
     return (
       <Fragment>
         <h2>Portfolio</h2>
         <ul className="portfolio-list">
-          <li className="portfolio-item">
-            <h4 className="item-title">Title</h4>
-            <img
-              src="https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1"
-              alt=""
-            />
-            <div className="portfolio-descr">lorem ipsum blabla bla</div>
-          </li>
+          {works.map(work => {
+            const { title, image, skills, id } = work;
+            return (
+              <li className="portfolio-item" key={id}>
+                <img src={image} alt={title} />
+                <h4> {title} </h4>
+                <p> {skills} </p>
+              </li>
+            );
+          })}
         </ul>
       </Fragment>
     );

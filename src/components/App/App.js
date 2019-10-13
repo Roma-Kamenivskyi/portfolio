@@ -12,6 +12,9 @@ import options from "./particlesOptions";
 import "./App.css";
 
 class App extends Component {
+  state = {
+    loading: false
+  };
   render() {
     return (
       <div className="App">
@@ -19,7 +22,7 @@ class App extends Component {
         <Router>
           <HeaderApp />
           <div className="wrapper">
-            <Route path="/home" component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/skills" component={Skills} />
             <Route path="/contacts" component={Contacts} />

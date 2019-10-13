@@ -2,18 +2,27 @@
   "works": [
     {
       "title": "Joby",
-      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
-      "skills": "HTML, CSS, JavaScript"
+      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, JavaScript",
+      "id": "100",
+      "link": "https://roma-kamenivskyi.github.io/Joby-test-project/",
+      "repository": "https://github.com/Roma-Kamenivskyi/Joby-test-project"
     },
     {
       "title": "Blue Rex",
-      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
-      "skills": "HTML, CSS, bootstrap 4, jQuery"
+      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, bootstrap 4, jQuery",
+      "id": "101",
+      "link": "https://roma-kamenivskyi.github.io/bootstrap-project/",
+      "repository": "https://github.com/Roma-Kamenivskyi/bootstrap-project"
     },
     {
       "title": "Tourist",
-      "url": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
-      "skills": "HTML, CSS, jQuery"
+      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "skills": "HTML, CSS, jQuery",
+      "id": "102",
+      "link": "https://roma-kamenivskyi.github.io/tourist/",
+      "repository": "https://github.com/Roma-Kamenivskyi/tourist"
     }
   ]
 }
