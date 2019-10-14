@@ -1,10 +1,12 @@
 import React, { Fragment, Component } from "react";
+import PortfolioItem from "../PortfolioItem";
 import "./Portfolio.css";
 
 class Portfolio extends Component {
   state = {
     works: []
   };
+
   componentDidMount() {
     fetch(
       "https://raw.githubusercontent.com/Roma-Kamenivskyi/portfolio/master/src/db/works.json"
@@ -19,21 +21,15 @@ class Portfolio extends Component {
       )
       .catch(err => console.log("error: ", err));
   }
+
   render() {
     const { works } = this.state;
     return (
       <Fragment>
-        <h2>Portfolio</h2>
+        <h2 className="section-title">Portfolio</h2>
         <ul className="portfolio-list">
           {works.map(work => {
-            const { title, image, skills, id } = work;
-            return (
-              <li className="portfolio-item" key={id}>
-                <img src={image} alt={title} />
-                <h4> {title} </h4>
-                <p> {skills} </p>
-              </li>
-            );
+            return <PortfolioItem data={work} key={work.id} />;
           })}
         </ul>
       </Fragment>

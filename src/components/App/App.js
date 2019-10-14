@@ -5,7 +5,6 @@ import HeaderApp from "../HeaderApp";
 import Home from "../Home";
 import Portfolio from "../Portfolio";
 import Skills from "../Skills";
-// import About from "../Home";
 import Contacts from "../Contacts";
 import { styles } from "./particlesOptions";
 import options from "./particlesOptions";

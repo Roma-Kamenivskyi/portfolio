@@ -12,6 +12,9 @@ img {
 body {
   font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
 }
+ul {
+  list-style-type: none;
+}
 .App {
   min-height: 100vh;
   position: relative;
@@ -33,4 +36,10 @@ a {
 
 .App-link {
   color: #09d3ac;
+}
+.section-title {
+  color: white;
+  font-size: 34px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
