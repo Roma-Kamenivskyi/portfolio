@@ -1,15 +1,52 @@
-import React, { Fragment } from "react";
+import React, { Component, Fragment } from "react";
+import ProgressBar from "../ProgressBar";
 import "./Skills.css";
 
-const Skills = () => {
-  return (
-    <Fragment>
-      <h2 className="section-title">Skills</h2>
-      <ul>
-        <li>asd</li>
-      </ul>
-    </Fragment>
-  );
-};
+class Skills extends Component {
+  state = {
+    skills: []
+  };
+  componentDidMount() {
+    fetch(
+      "https://raw.githubusercontent.com/Roma-Kamenivskyi/portfolio/master/src/db/skills.json"
+    )
+      .then(res => res.json())
+      .then(res =>
+        this.setState(() => {
+          return {
+            skills: res.data
+          };
+        })
+      )
+      .catch(err => console.log("error: ", err));
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <h2 className="section-title">Skills</h2>
+        <ul>
+          <li>
+            <ProgressBar />
+          </li>
+          <li>
+            <div className="progress">
+              <div className="progress-value" style={{ width: "90%" }}>
+                CSS
+              </div>
+            </div>
+          </li>
+          <li>
+            <div className="progress">
+              <div className="progress-value" style={{ width: "92%" }}>
+                JavaScript
+              </div>
+            </div>
+          </li>
+        </ul>
+      </Fragment>
+    );
+  }
+}
 
 export default Skills;

@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "skill": "HTML",
+      "percent": "90%"
+    },
+    {
+      "skill": "CSS",
+      "percent": "85%"
+    },
+    {
+      "skill": "JavaScript",
+      "percent": "90%"
+    },
+    {
+      "skill": "React",
+      "percent": "40%"
+    }
+  ]
+}
