@@ -2,19 +2,23 @@
   "data": [
     {
       "skill": "HTML",
-      "percent": "90%"
+      "percent": "90%",
+      "id": "1"
     },
     {
       "skill": "CSS",
-      "percent": "85%"
+      "percent": "85%",
+      "id": "2"
     },
     {
       "skill": "JavaScript",
-      "percent": "90%"
+      "percent": "90%",
+      "id": "3"
     },
     {
       "skill": "React",
-      "percent": "40%"
+      "percent": "40%",
+      "id": "4"
     }
   ]
 }

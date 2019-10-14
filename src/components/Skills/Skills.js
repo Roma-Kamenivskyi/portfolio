@@ -26,23 +26,13 @@ class Skills extends Component {
       <Fragment>
         <h2 className="section-title">Skills</h2>
         <ul>
-          <li>
-            <ProgressBar />
-          </li>
-          <li>
-            <div className="progress">
-              <div className="progress-value" style={{ width: "90%" }}>
-                CSS
-              </div>
-            </div>
-          </li>
-          <li>
-            <div className="progress">
-              <div className="progress-value" style={{ width: "92%" }}>
-                JavaScript
-              </div>
-            </div>
-          </li>
+          {this.state.skills.map(skill => {
+            return (
+              <li key={skill.id}>
+                <ProgressBar data={skill} />
+              </li>
+            );
+          })}
         </ul>
       </Fragment>
     );
