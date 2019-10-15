@@ -1,0 +1,46 @@
+.contacts-wrapper {
+  padding: 30px 0;
+}
+.contacts {
+  background-color: rgba(34, 34, 34, 0.7);
+  min-height: 60vh;
+  padding: 40px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px 0 50px 0;
+  border: 4px solid transparent;
+  border-left-color: #ff8000;
+  border-top-color: #ffffff;
+  border-right-color: #ff8000;
+  border-bottom-color: #ffffff;
+}
+.contacts p,
+.mail {
+  font-size: 24px;
+  color: #ffffff;
+}
+.contacts p:first-child,
+.mail {
+  margin-bottom: 20px;
+}
+.mail-link {
+  position: relative;
+  color: #ff8000;
+}
+.mail-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background-color: #ff8000;
+  transition: 0.5s ease;
+}
+.mail-link:hover.mail-link::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
