@@ -7,18 +7,28 @@
     },
     {
       "skill": "CSS",
-      "percent": "85%",
+      "percent": "88%",
       "id": "2"
     },
     {
       "skill": "JavaScript",
-      "percent": "90%",
+      "percent": "84%",
       "id": "3"
+    },
+    {
+      "skill": "bootstrap 4",
+      "percent": "70%",
+      "id": "4"
+    },
+    {
+      "skill": "jQuery",
+      "percent": "60%",
+      "id": "5"
     },
     {
       "skill": "React",
       "percent": "40%",
-      "id": "4"
+      "id": "6"
     }
   ]
 }

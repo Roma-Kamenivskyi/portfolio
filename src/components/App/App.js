@@ -6,8 +6,7 @@ import Home from "../Home";
 import Portfolio from "../Portfolio";
 import Skills from "../Skills";
 import Contacts from "../Contacts";
-import { styles } from "./particlesOptions";
-import options from "./particlesOptions";
+import options, { styles } from "./particlesOptions";
 import "./App.css";
 
 class App extends Component {

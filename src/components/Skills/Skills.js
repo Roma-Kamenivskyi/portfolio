@@ -25,10 +25,10 @@ class Skills extends Component {
     return (
       <Fragment>
         <h2 className="section-title">Skills</h2>
-        <ul>
+        <ul className="skills-list">
           {this.state.skills.map(skill => {
             return (
-              <li key={skill.id}>
+              <li className="skill-item" key={skill.id}>
                 <ProgressBar data={skill} />
               </li>
             );

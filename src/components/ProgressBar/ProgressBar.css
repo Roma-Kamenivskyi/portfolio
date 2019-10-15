@@ -1,0 +1,14 @@
+.progress,
+.progress-value {
+  border-radius: 30px;
+}
+.progress {
+  width: 500px;
+  background-color: #ffffff;
+  margin: 20px auto 0 auto;
+}
+.progress-value {
+  font-size: 24px;
+  background-image: linear-gradient(45deg, #83ff36, #ff1a02);
+  width: 80%;
+}
