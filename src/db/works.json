@@ -2,7 +2,7 @@
   "works": [
     {
       "title": "Joby",
-      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "image": "./joby.jpg",
       "skills": "HTML, CSS, JavaScript",
       "id": "100",
       "link": "https://roma-kamenivskyi.github.io/Joby-test-project/",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Blue Rex",
-      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "image": "./blue-rex.jpg",
       "skills": "HTML, CSS, bootstrap 4, jQuery",
       "id": "101",
       "link": "https://roma-kamenivskyi.github.io/bootstrap-project/",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Tourist",
-      "image": "https://i2.wp.com/psd.in.ua/wp-content/uploads/kreativnyiy-maket-sayta-dlya-kompanii.jpg?w=600&ssl=1",
+      "image": "./tourist.jpg",
       "skills": "HTML, CSS, jQuery",
       "id": "102",
       "link": "https://roma-kamenivskyi.github.io/tourist/",
