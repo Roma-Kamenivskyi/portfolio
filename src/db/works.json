@@ -2,7 +2,7 @@
   "works": [
     {
       "title": "Joby",
-      "image": "./joby.jpg",
+      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/joby.jpg?raw=true",
       "skills": "HTML, CSS, JavaScript",
       "id": "100",
       "link": "https://roma-kamenivskyi.github.io/Joby-test-project/",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Blue Rex",
-      "image": "./blue-rex.jpg",
+      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/blue-rex.jpg?raw=true",
       "skills": "HTML, CSS, bootstrap 4, jQuery",
       "id": "101",
       "link": "https://roma-kamenivskyi.github.io/bootstrap-project/",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Tourist",
-      "image": "./tourist.jpg",
+      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/tourist.jpg?raw=true",
       "skills": "HTML, CSS, jQuery",
       "id": "102",
       "link": "https://roma-kamenivskyi.github.io/tourist/",
