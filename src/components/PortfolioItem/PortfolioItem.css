@@ -1,11 +1,26 @@
+.flip {
+  perspective: 700px;
+  padding: 0 20px;
+}
 .portfolio-item {
   position: relative;
-  width: 30%;
-  min-height: 300px;
+  width: 350px;
+  height: 350px;
   margin-bottom: 25px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
-.portfolio-item:hover .portfolio-descr {
-  transform: scale(1);
+.portfolio-item:hover {
+  transform: rotateY(180deg);
+}
+.portfolio-face {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  backface-visibility: hidden;
+}
+.portfolio-face.back {
+  transform: rotateY(180deg);
 }
 .portfolio-descr {
   position: absolute;
@@ -14,6 +29,7 @@
   bottom: 0;
   right: 0;
   display: flex;
+  padding: 0 5px;
   justify-content: center;
   flex-direction: column;
   transition: 0.4s ease;
@@ -60,10 +76,17 @@
 
 @media (max-width: 1000px) {
   .portfolio-item {
-    width: 45%;
+    width: 300px;
+    height: 300px;
   }
   .name {
     width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: 250px;
+    height: 250px;
   }
 }
 @media (max-width: 700px) {
@@ -74,6 +97,12 @@
     text-align: left;
   }
 }
+@media (max-width: 670px) {
+  .portfolio-item {
+    width: 400px;
+    height: 400px;
+  }
+}
 @media (max-width: 650px) {
   .name {
     font-size: 54px;
@@ -81,5 +110,17 @@
   .introduction {
     font-size: 27px;
     text-align: left;
+  }
+}
+@media (max-width: 500px) {
+  .portfolio-item {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .portfolio-item {
+    width: 270px;
+    height: 270px;
   }
 }

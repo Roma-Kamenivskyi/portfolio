@@ -3,14 +3,16 @@
   border-radius: 30px;
 }
 .progress {
-  width: 500px;
+  position: relative;
+  width: 100%;
   background-color: #ffffff;
   margin: 20px auto 0 auto;
 }
 .progress-value {
-  font-size: 24px;
+  font-size: 30px;
+  text-indent: -9999px;
   background-size: 40px 40px;
-  color: #ffffff;
+  color: transparent;
   background-color: #ff8000;
   background-image: -webkit-linear-gradient(
     -45deg,
@@ -42,4 +44,22 @@
     transparent 75%,
     transparent
   );
+}
+.progress-skill-name,
+.progress-percent {
+  position: absolute;
+}
+.progress-skill-name {
+  font-weight: 600;
+  color: #222222;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.progress-percent {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 600;
+  color: #222222;
 }

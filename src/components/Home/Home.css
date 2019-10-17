@@ -1,5 +1,6 @@
 .name {
   font-size: 70px;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: contain;
@@ -13,13 +14,11 @@
   display: block;
   text-align: left;
 }
-.name-top::after {
-}
 .name-bottom {
   display: block;
   text-align: right;
 }
-.introduction {
+.text-intro {
   font-size: 34px;
   margin-top: 25px;
   color: #ff8000;
@@ -29,4 +28,15 @@
 }
 .work-position {
   text-shadow: 0px 0px 7px #ffffff;
+}
+@media (max-width: 768px) {
+  .introduction-page .social-list {
+    justify-content: flex-start;
+  }
+  .text-intro {
+    text-align: left;
+  }
+  .work-position {
+    display: block;
+  }
 }

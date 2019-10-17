@@ -6,3 +6,8 @@
 .skill-item {
   width: 45%;
 }
+@media (max-width: 900px) {
+  .skill-item {
+    width: 100%;
+  }
+}

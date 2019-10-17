@@ -6,26 +6,28 @@ const PortfolioItem = props => {
   const { title, image, skills, link, id, repository } = props.data;
 
   return (
-    <li className="portfolio-item" key={id}>
-      <img src={image} alt={title} />
-      <div className="portfolio-descr">
-        <a
-          href={link}
-          className="portfolio-title"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {title}
-        </a>
-        <p className="portfolio-skills">{skills}</p>
-        <a
-          href={repository}
-          className="portfolio-repo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Repository
-        </a>
+    <li className="flip" key={id}>
+      <div className="portfolio-item">
+        <img className="portfolio-face" src={image} alt={title} />
+        <div className="portfolio-descr portfolio-face back">
+          <a
+            href={link}
+            className="portfolio-title"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {title}
+          </a>
+          <p className="portfolio-skills">{skills}</p>
+          <a
+            href={repository}
+            className="portfolio-repo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Repository
+          </a>
+        </div>
       </div>
     </li>
   );

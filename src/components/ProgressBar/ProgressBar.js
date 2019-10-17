@@ -7,6 +7,8 @@ const ProgressBar = ({ data: { skill, percent } }) => {
       <div className="progress-value" style={{ width: percent }}>
         {skill}
       </div>
+      <span className="progress-skill-name">{skill}</span>
+      <span className="progress-percent">{percent}</span>
     </div>
   );
 };
