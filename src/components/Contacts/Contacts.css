@@ -2,6 +2,7 @@
   padding: 30px 0;
 }
 .contacts {
+  font-size: 24px;
   background-color: rgba(34, 34, 34, 0.7);
   min-height: 60vh;
   padding: 40px 15px;
@@ -18,7 +19,6 @@
 }
 .contacts p,
 .mail {
-  font-size: 24px;
   color: #ffffff;
 }
 .contacts p:first-child,
@@ -42,5 +42,9 @@
 .mail-link:hover.mail-link::after {
   width: 100%;
   left: 0;
-  right: auto;
+}
+@media (max-width: 400px) {
+  .contacts {
+    font-size: 20px;
+  }
 }
