@@ -2,27 +2,27 @@
   "works": [
     {
       "title": "Joby",
-      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/joby.jpg?raw=true",
+      "image": "https://github.com/kamenivskyi/portfolio/blob/master/src/db/joby.jpg?raw=true",
       "skills": "HTML, CSS, JavaScript",
       "id": "100",
-      "link": "https://roma-kamenivskyi.github.io/Joby-test-project/",
-      "repository": "https://github.com/Roma-Kamenivskyi/Joby-test-project"
+      "link": "https://kamenivskyi.github.io/Joby-test-project/",
+      "repository": "https://github.com/kamenivskyi/Joby-test-project"
     },
     {
       "title": "Blue Rex",
-      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/blue-rex.jpg?raw=true",
+      "image": "https://github.com/kamenivskyi/portfolio/blob/master/src/db/blue-rex.jpg?raw=true",
       "skills": "HTML, CSS, bootstrap 4, jQuery",
       "id": "101",
-      "link": "https://roma-kamenivskyi.github.io/bootstrap-project/",
-      "repository": "https://github.com/Roma-Kamenivskyi/bootstrap-project"
+      "link": "https://kamenivskyi.github.io/bootstrap-project/",
+      "repository": "https://github.com/kamenivskyi/bootstrap-project"
     },
     {
       "title": "Tourist",
-      "image": "https://github.com/Roma-Kamenivskyi/portfolio/blob/master/src/db/tourist.jpg?raw=true",
+      "image": "https://github.com/kamenivskyi/portfolio/blob/master/src/db/tourist.jpg?raw=true",
       "skills": "HTML, CSS, jQuery",
       "id": "102",
-      "link": "https://roma-kamenivskyi.github.io/tourist/",
-      "repository": "https://github.com/Roma-Kamenivskyi/tourist"
+      "link": "https://kamenivskyi.github.io/tourist/",
+      "repository": "https://github.com/kamenivskyi/tourist"
     }
   ]
 }
