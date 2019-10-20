@@ -6,7 +6,7 @@ const Social = () => {
     <ul className="social-list">
       <li className="social-item">
         <a
-          href="https://github.com/Roma-Kamenivskyi"
+          href="https://github.com/kamenivskyi"
           className="fab fa-github"
           target="_blank"
           rel="noopener noreferrer"
