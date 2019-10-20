@@ -6,11 +6,8 @@ import Home from "../Home";
 import Portfolio from "../Portfolio";
 import Skills from "../Skills";
 import Contacts from "../Contacts";
-import WithSpinner from "../WithSpinner";
 import options, { styles } from "./particlesOptions";
 import "./App.css";
-
-// const PortfolioWithSpinner = WithSpinner(Portfolio);
 
 class App extends Component {
   state = {

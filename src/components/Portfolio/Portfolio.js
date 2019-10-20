@@ -2,8 +2,6 @@ import React, { Fragment, Component } from "react";
 import PortfolioItem from "../PortfolioItem";
 import "./Portfolio.css";
 
-// const PortfolioWithSpinner = WithSpinner(Portfolio);
-
 class Portfolio extends Component {
   state = {
     works: []
@@ -25,13 +23,6 @@ class Portfolio extends Component {
   }
 
   render() {
-    const { isLoading } = this.props;
-    // console.log("this.state", this.state);
-
-    // console.log(works);
-    // if (isLoading) {
-    //   return <h1>Loading..</h1>;
-    // }
     return (
       <Fragment>
         <h2 className="section-title">Portfolio</h2>

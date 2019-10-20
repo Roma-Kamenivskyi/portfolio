@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./PortfolioItem.css";
 
-const PortfolioItem = props => {
-  const { title, image, skills, link, id, repository } = props.data;
-
+const PortfolioItem = ({
+  data: { title, image, skills, link, id, repository }
+}) => {
   return (
     <li className="flip" key={id}>
       <div className="portfolio-item">

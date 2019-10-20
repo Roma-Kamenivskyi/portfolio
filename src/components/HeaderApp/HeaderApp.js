@@ -14,6 +14,7 @@ const HeaderApp = () => {
     const firstSpan = burgerFirstSpan.current;
     const secondSpan = burgerSecondSpan.current;
     const thirdSpan = burgerThirdSpan.current;
+
     firstSpan.classList.toggle("active");
     secondSpan.classList.toggle("active");
     thirdSpan.classList.toggle("active");
