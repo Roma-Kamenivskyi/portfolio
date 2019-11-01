@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./HeaderApp.css";
 import logo from "./logo.png";
 
-const HeaderApp = () => {
+const HeaderApp = props => {
   const linkList = React.createRef();
   const burgerFirstSpan = React.createRef();
   const burgerSecondSpan = React.createRef();

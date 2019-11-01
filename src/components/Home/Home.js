@@ -1,8 +1,7 @@
 import React from "react";
 import Social from "../Social";
 import "./Home.css";
-
-const Home = () => {
+const Home = props => {
   return (
     <div className="introduction-page">
       <h1 className="name">

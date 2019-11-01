@@ -2,7 +2,7 @@ import React from "react";
 import Social from "../Social";
 import "./Contacts.css";
 
-const Contacts = () => {
+const Contacts = props => {
   return (
     <div className="contacts-wrapper">
       <h2 className="section-title">Contacts</h2>

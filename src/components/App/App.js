@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import Particles from "react-particles-js";
 import HeaderApp from "../HeaderApp";
 import Home from "../Home";
