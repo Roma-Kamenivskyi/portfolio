@@ -4,21 +4,12 @@ import "./HeaderApp.css";
 import logo from "./logo.png";
 
 const HeaderApp = props => {
-  const linkList = React.createRef();
-  const burgerFirstSpan = React.createRef();
-  const burgerSecondSpan = React.createRef();
-  const burgerThirdSpan = React.createRef();
+  const linkListRef = React.createRef();
+  const burgerButtonRef = React.createRef();
 
   const toggleMobileNav = () => {
-    const links = linkList.current;
-    const firstSpan = burgerFirstSpan.current;
-    const secondSpan = burgerSecondSpan.current;
-    const thirdSpan = burgerThirdSpan.current;
-
-    firstSpan.classList.toggle("active");
-    secondSpan.classList.toggle("active");
-    thirdSpan.classList.toggle("active");
-    links.classList.toggle("active-mobile-nav");
+    linkListRef.current.classList.toggle("active-mobile-nav");
+    burgerButtonRef.current.classList.toggle("active");
   };
 
   return (
@@ -28,7 +19,7 @@ const HeaderApp = props => {
           <Link to="/" className="logo">
             <img src={logo} alt="logo" />
           </Link>
-          <ul className="links-list" ref={linkList}>
+          <ul className="links-list" ref={linkListRef}>
             <li>
               <Link className="link" to="">
                 Home
@@ -50,10 +41,14 @@ const HeaderApp = props => {
               </Link>
             </li>
           </ul>
-          <button className="toggle-mobile-navbar" onClick={toggleMobileNav}>
-            <span className="burger-first-span" ref={burgerFirstSpan}></span>
-            <span className="burger-second-span" ref={burgerSecondSpan}></span>
-            <span className="burger-third-span" ref={burgerThirdSpan}></span>
+          <button
+            className="toggle-mobile-navbar"
+            onClick={toggleMobileNav}
+            ref={burgerButtonRef}
+          >
+            <span className="burger-span"></span>
+            <span className="burger-span"></span>
+            <span className="burger-span"></span>
           </button>
         </nav>
       </div>

@@ -1,6 +1,5 @@
 .header-app {
   padding: 5px 0;
-  /* background-image: linear-gradient(45deg, #ff8000, #222222); */
   background-color: #ffffff;
   box-shadow: 0px 1px 7px #cccccc;
   margin-bottom: 50px;
@@ -70,62 +69,53 @@
   position: absolute;
   display: none;
   right: 0;
-  top: 5px;
-  width: 50px;
-  height: 45px;
+  top: 10px;
+  width: 42px;
+  height: 34px;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
 }
-.burger-first-span.active {
-  opacity: 0;
-  visibility: hidden;
-}
-.burger-second-span.active {
-  transform: rotate(-45deg);
-  top: 18px;
-}
-.burger-third-span.active {
-  transform: rotate(45deg);
-  top: 18px;
-}
 
-.burger-first-span {
+.burger-span {
+  border-radius: 3px;
+  transition: 0.4s ease;
   display: block;
   position: absolute;
-  top: 4px;
   left: 0px;
   width: 100%;
-  right: 5px;
   height: 5px;
+}
+
+.burger-span:first-child {
+  top: 0px;
+  right: 5px;
   opacity: 1;
   visibility: visible;
   background: #222222;
   transition: 0.1s ease;
 }
 
-.burger-second-span {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 20px;
-  width: 100%;
-  height: 5px;
-  transition: 0.4s ease;
+.burger-span:nth-child(2) {
+  top: 15px;
   background-color: #ff8000;
 }
-.burger-third-span {
-  content: "";
-  position: absolute;
-  display: block;
-  left: 0px;
-  top: 35px;
-  width: 100%;
-  height: 5px;
+.burger-span:nth-child(3) {
+  top: 29px;
   background: #222222;
-  transition: 0.4s ease;
+}
+.toggle-mobile-navbar.active .burger-span:first-child {
+  opacity: 0;
+  visibility: hidden;
+}
+.toggle-mobile-navbar.active .burger-span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 15px;
+}
+.toggle-mobile-navbar.active .burger-span:last-child {
+  transform: rotate(45deg);
+  top: 15px;
 }
 .links-list.active-mobile-nav {
   display: block;

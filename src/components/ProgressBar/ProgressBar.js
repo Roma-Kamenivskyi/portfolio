@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./ProgressBar.css";
 
 const ProgressBar = ({ data: { skill, percent } }) => {
@@ -10,5 +11,7 @@ const ProgressBar = ({ data: { skill, percent } }) => {
     </div>
   );
 };
-
+ProgressBar.propTypes = {
+  data: PropTypes.object
+};
 export default ProgressBar;

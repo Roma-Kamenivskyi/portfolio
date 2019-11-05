@@ -1,43 +1,80 @@
-import React, { Component, Fragment } from "react";
-import { HashRouter as Router, Route } from "react-router-dom";
+import React, { useState } from "react";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Particles from "react-particles-js";
 import HeaderApp from "../HeaderApp";
 import Home from "../Home";
 import Portfolio from "../Portfolio";
 import Skills from "../Skills";
 import Contacts from "../Contacts";
-import options, { styles } from "./particlesOptions";
+import particlesOptions, { particlesStyles } from "./particlesOptions";
 import "./App.css";
 
-class App extends Component {
-  state = {
-    isLoading: false
+const App = () => {
+  const [works, setWorks] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const fetchData = async url => {
+    const baseUrl =
+      "https://raw.githubusercontent.com/Kamenivskyi/portfolio/master/src/db";
+    const res = await fetch(`${baseUrl}${url}`);
+    return res.json();
   };
 
-  render() {
-    const { isLoading } = this.state;
-    return (
+  const getWorks = () => {
+    setLoading(true);
+    fetchData("/works.json")
+      .then(res => {
+        setWorks(res.works);
+        setLoading(false);
+      })
+      .catch(err => console.warn("Error: ", err));
+  };
+
+  const getSkills = () => {
+    setLoading(true);
+    fetchData("/skills.json")
+      .then(res => {
+        setSkills(res.data);
+        setLoading(false);
+      })
+      .catch(err => console.warn("Error: ", err));
+  };
+
+  return (
+    <Router>
       <div className="App">
-        <Particles params={options} style={styles} />
-        <Router>
-          <HeaderApp />
-          <div className="wrapper">
+        <Particles params={particlesOptions} style={particlesStyles} />
+        <HeaderApp />
+        <div className="wrapper">
+          <Switch>
             <Route path="/" exact component={Home} />
             <Route
               path="/portfolio"
               render={props => (
-                <Fragment>
-                  <Portfolio isLoading={isLoading} />
-                </Fragment>
+                <Portfolio
+                  loading={loading}
+                  getWorks={getWorks}
+                  works={works}
+                />
               )}
             />
-            <Route path="/skills" component={Skills} />
+            <Route
+              path="/skills"
+              render={() => (
+                <Skills
+                  loading={loading}
+                  getSkills={getSkills}
+                  skills={skills}
+                />
+              )}
+            />
             <Route path="/contacts" component={Contacts} />
-          </div>
-        </Router>
+          </Switch>
+        </div>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

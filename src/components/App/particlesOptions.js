@@ -1,4 +1,4 @@
-const options = {
+const particlesOptions = {
   particles: {
     number: {
       value: 6,
@@ -108,7 +108,7 @@ const options = {
   },
   retina_detect: true
 };
-export const styles = {
+export const particlesStyles = {
   width: "100%",
   height: "100%",
   position: "fixed",
@@ -116,4 +116,4 @@ export const styles = {
   zIndex: "-1",
   top: "0"
 };
-export default options;
+export default particlesOptions;

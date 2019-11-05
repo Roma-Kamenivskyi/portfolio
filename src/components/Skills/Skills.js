@@ -1,42 +1,35 @@
-import React, { Component, Fragment } from "react";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import ProgressBar from "../ProgressBar";
+import Spinner from "../Spinner";
 import "./Skills.css";
 
-class Skills extends Component {
-  state = {
-    skills: []
-  };
-  componentDidMount() {
-    fetch(
-      "https://raw.githubusercontent.com/Roma-Kamenivskyi/portfolio/master/src/db/skills.json"
-    )
-      .then(res => res.json())
-      .then(res =>
-        this.setState(() => {
-          return {
-            skills: res.data
-          };
-        })
-      )
-      .catch(err => console.log("error: ", err));
-  }
+const Skills = ({ skills, loading, getSkills }) => {
+  useEffect(() => {
+    getSkills();
+    // eslint-disable-next-line
+  }, []);
 
-  render() {
-    return (
-      <Fragment>
-        <h2 className="section-title">Skills</h2>
-        <ul className="skills-list">
-          {this.state.skills.map(skill => {
-            return (
-              <li className="skill-item" key={skill.id}>
-                <ProgressBar data={skill} />
-              </li>
-            );
-          })}
-        </ul>
-      </Fragment>
-    );
-  }
-}
+  if (loading) return <Spinner />;
+  return (
+    <>
+      <h2 className="section-title">Skills</h2>
+      <ul className="skills-list">
+        {skills.map(skill => {
+          return (
+            <li className="skill-item" key={skill.id}>
+              <ProgressBar data={skill} />
+            </li>
+          );
+        })}
+      </ul>
+    </>
+  );
+};
+Skills.propTypes = {
+  skills: PropTypes.array,
+  loading: PropTypes.bool,
+  getSkills: PropTypes.func
+};
 
 export default Skills;

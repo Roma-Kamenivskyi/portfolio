@@ -1,39 +1,31 @@
-import React, { Fragment, Component } from "react";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import PortfolioItem from "../PortfolioItem";
+import Spinner from "../Spinner";
 import "./Portfolio.css";
 
-class Portfolio extends Component {
-  state = {
-    works: []
-  };
+const Portfolio = ({ works, loading, getWorks }) => {
+  useEffect(() => {
+    getWorks();
+    // eslint-disable-next-line
+  }, []);
 
-  componentDidMount() {
-    fetch(
-      "https://raw.githubusercontent.com/Kamenivskyi/portfolio/master/src/db/works.json"
-    )
-      .then(res => res.json())
-      .then(res => {
-        this.setState(() => {
-          return {
-            works: res.works
-          };
-        });
-      })
-      .catch(err => console.log("Error: ", err));
-  }
-
-  render() {
-    return (
-      <Fragment>
-        <h2 className="section-title">Portfolio</h2>
-        <ul className="portfolio-list">
-          {this.state.works.map(work => {
-            return <PortfolioItem data={work} key={work.id} />;
-          })}
-        </ul>
-      </Fragment>
-    );
-  }
-}
+  if (loading) return <Spinner />;
+  return (
+    <>
+      <h2 className="section-title">Portfolio</h2>
+      <ul className="portfolio-list">
+        {works.map(work => {
+          return <PortfolioItem data={work} key={work.id} />;
+        })}
+      </ul>
+    </>
+  );
+};
+Portfolio.propTypes = {
+  works: PropTypes.array,
+  loading: PropTypes.bool,
+  getWorks: PropTypes.func
+};
 
 export default Portfolio;

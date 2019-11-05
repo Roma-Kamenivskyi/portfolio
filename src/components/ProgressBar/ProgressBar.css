@@ -11,6 +11,7 @@
 }
 .progress-value {
   height: 100%;
+  max-width: 100%;
   background-size: 40px 40px;
   color: transparent;
   background-color: #ff8000;
