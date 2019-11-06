@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./HeaderApp.css";
-import logo from "./logo.png";
+import logo from "./logo3.svg";
 
 const HeaderApp = props => {
   const linkListRef = React.createRef();
@@ -17,7 +17,11 @@ const HeaderApp = props => {
       <div className="wrapper">
         <nav className="navbar-app">
           <Link to="/" className="logo">
-            <img src={logo} alt="logo" />
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "50px", height: "50px" }}
+            />
           </Link>
           <ul className="links-list" ref={linkListRef}>
             <li>
