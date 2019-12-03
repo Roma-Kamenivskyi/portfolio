@@ -8,6 +8,7 @@
   height: 40px;
   background-color: #ffffff;
   margin: 10px auto 20px auto;
+  overflow: hidden;
 }
 .progress-value {
   height: 100%;
@@ -15,6 +16,7 @@
   background-size: 40px 40px;
   color: transparent;
   background-color: #ff8000;
+  animation: progress 1.5s ease-in-out;
   background-image: -webkit-linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0.2) 25%,
@@ -45,6 +47,11 @@
     transparent 75%,
     transparent
   );
+}
+@keyframes progress {
+  from {
+    width: 0;
+  }
 }
 .progress-skill-name,
 .progress-percent {

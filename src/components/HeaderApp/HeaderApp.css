@@ -10,9 +10,11 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
 }
-
+.logo img {
+  margin-bottom: -4px;
+}
 .logo,
 .links-list li a {
   color: #222222;
@@ -37,7 +39,7 @@
   transition: 0.3s ease;
 }
 .link::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -46,7 +48,7 @@
   background-color: #ff8000;
 }
 .link::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0;
   bottom: -5px;
@@ -76,6 +78,7 @@
   border: none;
   outline: none;
   cursor: pointer;
+  margin-top: -2px;
 }
 
 .burger-span {

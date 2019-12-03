@@ -1,16 +1,16 @@
-import React from "react";
-import Social from "../Social";
-import "./Home.css";
+import React from 'react';
+import Social from '../Social';
+import './Home.css';
 const Home = props => {
   return (
-    <div className="introduction-page">
-      <h1 className="name">
-        <span className="name-top">Roman</span>
-        <span className="name-bottom">Kamenivskyi</span>
+    <div className='introduction-page'>
+      <h1 className='name'>
+        <span className='name-top'>Roman</span>
+        <span className='name-bottom'>Kamenivskyi</span>
       </h1>
-      <p className="text-intro">
-        Hello<span className="c-white">,</span> i am beginner{" "}
-        <span className="c-white work-position">Front End Developer !</span>
+      <p className='text-intro'>
+        Hello<span className='c-white'>,</span> i am junior{' '}
+        <span className='c-white work-position'>front end developer !</span>
       </p>
       <Social />
     </div>

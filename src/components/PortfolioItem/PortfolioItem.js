@@ -1,32 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./PortfolioItem.css";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Reference } from '../common/Reference';
+import './PortfolioItem.css';
 
-const PortfolioItem = ({
-  data: { title, image, skills, link, id, repository }
-}) => {
+const PortfolioItem = ({ data }) => {
+  const { title, image, skills, link, id, repository } = data;
   return (
-    <li className="flip" key={id}>
-      <div className="portfolio-item">
-        <img className="portfolio-face" src={image} alt={title} />
-        <div className="portfolio-descr portfolio-face back">
-          <a
-            href={link}
-            className="portfolio-title"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <li className='flip' key={id}>
+      <div className='portfolio-item'>
+        <img className='portfolio-face' src={image} alt={title} />
+        <div className='portfolio-descr portfolio-face back'>
+          <Reference href={link} classes='portfolio-title'>
             {title}
-          </a>
-          <p className="portfolio-skills">{skills}</p>
-          <a
-            href={repository}
-            className="portfolio-repo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          </Reference>
+          <p className='portfolio-skills'>{skills}</p>
+          <Reference href={repository} classes='portfolio-repo'>
             Repository
-          </a>
+          </Reference>
         </div>
       </div>
     </li>
@@ -34,7 +24,7 @@ const PortfolioItem = ({
 };
 
 PortfolioItem.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object
 };
 
 export default PortfolioItem;

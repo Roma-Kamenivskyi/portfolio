@@ -7,10 +7,10 @@
   padding: 0 20px;
   font-size: 45px;
 }
-.social-item a {
+.social-item a i {
   transition: 0.4s ease;
 }
-.social-item a:hover {
+.social-item a i:hover {
   color: #ff8000;
   transform: scale(1.1);
 }

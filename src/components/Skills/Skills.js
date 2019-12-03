@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import ProgressBar from "../ProgressBar";
-import Spinner from "../Spinner";
-import "./Skills.css";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import ProgressBar from '../ProgressBar';
+import Spinner from '../Spinner';
+import './Skills.css';
 
 const Skills = ({ skills, loading, getSkills }) => {
   useEffect(() => {
@@ -10,14 +10,14 @@ const Skills = ({ skills, loading, getSkills }) => {
     // eslint-disable-next-line
   }, []);
 
-  if (loading) return <Spinner />;
   return (
     <>
-      <h2 className="section-title">Skills</h2>
-      <ul className="skills-list">
+      <h2 className='section-title'>Skills</h2>
+      {loading && <Spinner />}
+      <ul className='skills-list'>
         {skills.map(skill => {
           return (
-            <li className="skill-item" key={skill.id}>
+            <li className='skill-item' key={skill.id}>
               <ProgressBar data={skill} />
             </li>
           );

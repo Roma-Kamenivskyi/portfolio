@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import PortfolioItem from "../PortfolioItem";
-import Spinner from "../Spinner";
-import "./Portfolio.css";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import PortfolioItem from '../PortfolioItem';
+import Spinner from '../Spinner';
+import './Portfolio.css';
 
 const Portfolio = ({ works, loading, getWorks }) => {
   useEffect(() => {
@@ -10,11 +10,11 @@ const Portfolio = ({ works, loading, getWorks }) => {
     // eslint-disable-next-line
   }, []);
 
-  if (loading) return <Spinner />;
   return (
     <>
-      <h2 className="section-title">Portfolio</h2>
-      <ul className="portfolio-list">
+      <h2 className='section-title'>Portfolio</h2>
+      {loading && <Spinner />}
+      <ul className='portfolio-list'>
         {works.map(work => {
           return <PortfolioItem data={work} key={work.id} />;
         })}
