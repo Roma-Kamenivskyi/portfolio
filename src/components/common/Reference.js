@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const Reference = ({ children, classes, href }) => {
   return (
@@ -11,4 +12,9 @@ export const Reference = ({ children, classes, href }) => {
       {children}
     </a>
   );
+};
+
+Reference.propTypes = {
+  classes: PropTypes.string,
+  href: PropTypes.string
 };
