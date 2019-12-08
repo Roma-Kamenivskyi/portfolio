@@ -6,25 +6,30 @@ import Home from '../pages/home';
 import Portfolio from '../pages/portfolio';
 import Skills from '../pages/skills';
 import Contacts from '../pages/contacts';
+import NotFound from '../pages/not-found';
+import ErrorBoundary from '../error-boundary';
 import particlesOptions, { particlesStyles } from './particles-options';
 import './app.css';
 
 const App = () => {
   return (
-    <Router>
-      <div className='App'>
-        <Particles params={particlesOptions} style={particlesStyles} />
-        <Header />
-        <div className='wrapper'>
-          <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/portfolio' component={Portfolio} />
-            <Route path='/skills' component={Skills} />
-            <Route path='/contacts' component={Contacts} />
-          </Switch>
+    <ErrorBoundary>
+      <Router>
+        <div className='App'>
+          <Particles params={particlesOptions} style={particlesStyles} />
+          <Header />
+          <div className='wrapper'>
+            <Switch>
+              <Route path='/' exact component={Home} />
+              <Route path='/portfolio' component={Portfolio} />
+              <Route path='/skills' component={Skills} />
+              <Route path='/contacts' component={Contacts} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 };
 

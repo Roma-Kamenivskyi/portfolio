@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ErrorIndicator from '../../error-indicator';
 import Spinner from '../../layout/spinner';
+import ErrorBoundary from '../../error-boundary';
 import { fetchData } from '../../../utills/fetchData';
 
 const withData = (ViewComponent, dataUrl, insertBefore) => {
@@ -32,12 +33,12 @@ const withData = (ViewComponent, dataUrl, insertBefore) => {
     const hasData = !(error || loading);
 
     return (
-      <>
+      <ErrorBoundary>
         {insertBefore}
         {error && <ErrorIndicator />}
         {loading && <Spinner />}
         {hasData && <ViewComponent {...props} data={data} />}
-      </>
+      </ErrorBoundary>
     );
   };
 };

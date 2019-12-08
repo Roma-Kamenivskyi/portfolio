@@ -7,17 +7,15 @@ import './portfolio.css';
 const Portfolio = ({ data }) => {
   return (
     <>
-      {
-        <ul className='portfolio-list'>
-          {data.map(work => {
-            return (
-              <li className='flip' key={work.id}>
-                <PortfolioItem data={work} />
-              </li>
-            );
-          })}
-        </ul>
-      }
+      <ul className='portfolio-list'>
+        {data.map(work => {
+          return (
+            <li className='flip' key={work.id}>
+              <PortfolioItem data={work} />
+            </li>
+          );
+        })}
+      </ul>
     </>
   );
 };
