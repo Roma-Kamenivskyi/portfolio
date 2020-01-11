@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SocialItem = ({ href, type }) => {
+const SocialItem = ({ href = '', type }) => {
   return (
     <li className='social-item'>
       <a
@@ -13,6 +14,11 @@ const SocialItem = ({ href, type }) => {
       </a>
     </li>
   );
+};
+
+SocialItem.propTypes = {
+  href: PropTypes.string,
+  type: PropTypes.string.isRequired
 };
 
 export default SocialItem;
