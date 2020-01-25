@@ -1,7 +1,7 @@
 import React from 'react';
-import PortfolioItem from '../../layout/portfolio-item';
+import WorksList from '../../layout/works-list';
 import Spinner from '../../layout/spinner';
-import useFetch from '../../../hooks/useFetch';
+import useFetch from '../../../hooks/use-fetch';
 import './portfolio.css';
 
 const Portfolio = () => {
@@ -10,14 +10,9 @@ const Portfolio = () => {
   return (
     <>
       <h2 className='section-title'>Portfolio</h2>
-      <ul className='portfolio-list'>
+      <ul className='works-list'>
         {loading && <Spinner />}
-        {response &&
-          response.map(work => (
-            <li className='flip' key={work.id}>
-              <PortfolioItem data={work} />
-            </li>
-          ))}
+        <WorksList list={response} />
       </ul>
     </>
   );

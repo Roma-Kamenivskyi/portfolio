@@ -2,7 +2,7 @@
   perspective: 700px;
   padding: 0 20px;
 }
-.portfolio-item {
+.work-item {
   position: relative;
   width: 350px;
   height: 350px;
@@ -10,19 +10,19 @@
   transition: transform 1s;
   transform-style: preserve-3d;
 }
-.portfolio-item:hover {
+.work-item:hover {
   transform: rotateY(180deg);
 }
-.portfolio-face {
+.work-face {
   position: absolute;
   top: 0;
   bottom: 0;
   backface-visibility: hidden;
 }
-.portfolio-face.back {
+.work-face.back {
   transform: rotateY(180deg);
 }
-.portfolio-descr {
+.work-descr {
   position: absolute;
   left: 0;
   top: 0;
@@ -36,31 +36,31 @@
   transform: scale(0);
   background-color: #222222;
 }
-.portfolio-item img {
+.work-item img {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   object-fit: cover;
 }
-.portfolio-title {
+.work-title {
   display: inline-block;
   font-size: 20px;
   color: #ff8000;
   font-weight: 600;
   margin-bottom: 10px;
 }
-.portfolio-skills {
+.work-skills {
   color: #ffffff;
   margin-bottom: 10px;
 }
-.portfolio-repo {
+.work-repo {
   position: relative;
   color: #ff8000;
   font-weight: 600;
 }
-.portfolio-repo:after {
-  content: "";
+.work-repo:after {
+  content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
@@ -70,38 +70,38 @@
   background-color: #ffffff;
   transition: 0.4s ease;
 }
-.portfolio-repo:hover.portfolio-repo:after {
+.work-repo:hover.work-repo:after {
   transform: scale(1);
 }
 
 @media (max-width: 1000px) {
-  .portfolio-item {
+  .work-item {
     width: 300px;
     height: 300px;
   }
 }
 @media (max-width: 768px) {
-  .portfolio-item {
+  .work-item {
     width: 250px;
     height: 250px;
   }
 }
 
 @media (max-width: 670px) {
-  .portfolio-item {
+  .work-item {
     width: 400px;
     height: 400px;
   }
 }
 
 @media (max-width: 500px) {
-  .portfolio-item {
+  .work-item {
     width: 350px;
     height: 350px;
   }
 }
 @media (max-width: 400px) {
-  .portfolio-item {
+  .work-item {
     width: 270px;
     height: 270px;
   }
