@@ -6,17 +6,13 @@ import Skills from './components/pages/skills';
 import Contacts from './components/pages/contacts';
 import NotFound from './components/pages/not-found';
 
-const Routes = () => {
-  return (
-    <div className='wrapper'>
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/portfolio' component={Portfolio} />
-        <Route path='/skills' component={Skills} />
-        <Route path='/contacts' component={Contacts} />
-        <Route component={NotFound} />
-      </Switch>
-    </div>
-  );
-};
+const Routes = () => (
+  <Switch>
+    <Route path='/' exact component={Home} />
+    <Route path='/portfolio' component={Portfolio} />
+    <Route path='/skills' component={Skills} />
+    <Route path='/contacts' component={Contacts} />
+    <Route component={NotFound} />
+  </Switch>
+);
 export default Routes;

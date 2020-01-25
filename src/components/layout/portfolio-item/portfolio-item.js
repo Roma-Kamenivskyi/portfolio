@@ -9,11 +9,11 @@ const PortfolioItem = ({ data }) => {
     <div className='portfolio-item'>
       <img className='portfolio-face' src={image} alt={title} />
       <div className='portfolio-descr portfolio-face back'>
-        <Reference href={link} classes='portfolio-title'>
+        <Reference href={link} className='portfolio-title'>
           {title}
         </Reference>
         <p className='portfolio-skills'>{skills}</p>
-        <Reference href={repository} classes='portfolio-repo'>
+        <Reference href={repository} className='portfolio-repo'>
           Repository
         </Reference>
       </div>

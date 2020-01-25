@@ -7,18 +7,18 @@ import Routes from '../../routes';
 import particlesOptions, { particlesStyles } from './particles-options';
 import './app.css';
 
-const App = () => {
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className='App'>
-          <Particles params={particlesOptions} style={particlesStyles} />
-          <Header />
+const App = () => (
+  <ErrorBoundary>
+    <Router>
+      <div className='App'>
+        <Particles params={particlesOptions} style={particlesStyles} />
+        <Header />
+        <div className='wrapper'>
           <Routes />
         </div>
-      </Router>
-    </ErrorBoundary>
-  );
-};
+      </div>
+    </Router>
+  </ErrorBoundary>
+);
 
 export default App;
