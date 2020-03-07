@@ -27,8 +27,13 @@
     },
     {
       "skill": "React",
-      "percent": "50%",
+      "percent": "65%",
       "id": "6"
+    },
+    {
+      "skill": "Redux",
+      "percent": "45%",
+      "id": "7"
     }
   ]
 }

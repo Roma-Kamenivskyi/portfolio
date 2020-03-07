@@ -18,4 +18,4 @@ SkillsList.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object)
 };
 
-export default SkillsList;
+export default React.memo(SkillsList);

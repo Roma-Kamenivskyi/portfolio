@@ -14,8 +14,7 @@ const Portfolio = () => {
     <>
       <h2 className='section-title'>Portfolio</h2>
       <ul className='works-list'>
-        {loading && <Spinner />}
-        <WorksList list={response} />
+        {loading ? <Spinner /> : <WorksList list={response} />}
       </ul>
     </>
   );

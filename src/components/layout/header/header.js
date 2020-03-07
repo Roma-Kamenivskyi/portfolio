@@ -45,8 +45,8 @@ const Header = () => {
           >
             {Array(3)
               .fill()
-              .map(item => (
-                <span className='burger-span'></span>
+              .map((_, idx) => (
+                <span className='burger-span' key={idx}></span>
               ))}
           </button>
         </nav>

@@ -14,8 +14,7 @@ const Skills = () => {
     <>
       <h2 className='section-title'>Skills</h2>
       <ul className='skills-list'>
-        {loading && <Spinner />}
-        <SkillsList data={response} />
+        {loading ? <Spinner /> : <SkillsList data={response} />}
       </ul>
     </>
   );
