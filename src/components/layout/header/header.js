@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import './header.css';
+
+import { linksList } from '../../../db/header-links';
+
 import logo from './logo.svg';
 
-const Header = props => {
-  const linkListRef = React.createRef();
-  const burgerButtonRef = React.createRef();
+import './header.css';
+
+const Header = () => {
+  const linkListRef = useRef();
+  const burgerButtonRef = useRef();
 
   const toggleMobileNav = () => {
     linkListRef.current.classList.toggle('active-mobile-nav');
@@ -23,36 +27,27 @@ const Header = props => {
               style={{ width: '50px', height: '50px' }}
             />
           </Link>
+
           <ul className='links-list' ref={linkListRef}>
-            <li>
-              <Link className='link' to=''>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='link' to='/portfolio'>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link className='link' to='/skills'>
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link className='link' to='/contacts'>
-                Contacts
-              </Link>
-            </li>
+            {linksList.map(({ label, linkTo }) => (
+              <li key={label}>
+                <Link className='link' to={linkTo}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
+
           <button
             className='toggle-mobile-navbar'
             onClick={toggleMobileNav}
             ref={burgerButtonRef}
           >
-            <span className='burger-span'></span>
-            <span className='burger-span'></span>
-            <span className='burger-span'></span>
+            {Array(3)
+              .fill()
+              .map(item => (
+                <span className='burger-span'></span>
+              ))}
           </button>
         </nav>
       </div>

@@ -1,7 +1,10 @@
 import React from 'react';
-import WorksList from '../../layout/works-list';
-import Spinner from '../../layout/spinner';
-import useFetch from '../../../hooks/use-fetch';
+
+import WorksList from '../../components/layout/works-list';
+import Spinner from '../../components/layout/spinner';
+
+import useFetch from '../../hooks/use-fetch';
+
 import './portfolio.css';
 
 const Portfolio = () => {

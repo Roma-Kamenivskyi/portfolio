@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import ProgressBar from '../progress-bar';
 
 const SkillsList = ({ data }) => {

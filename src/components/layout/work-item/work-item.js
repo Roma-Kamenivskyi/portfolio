@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { Reference } from '../../common/reference';
+
 import './work-item.css';
 
 const WorkItem = ({ data }) => {
   const { title, image, skills, link, repository, id } = data;
+
   return (
     <li className='flip' key={id}>
       <div className='work-item'>

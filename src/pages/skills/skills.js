@@ -1,7 +1,10 @@
 import React from 'react';
-import Spinner from '../../layout/spinner';
-import SkillsList from '../../layout/skills-list';
-import useFetch from '../../../hooks/use-fetch';
+
+import Spinner from '../../components/layout/spinner';
+import SkillsList from '../../components/layout/skills-list';
+
+import useFetch from '../../hooks/use-fetch';
+
 import './skills.css';
 
 const Skills = () => {

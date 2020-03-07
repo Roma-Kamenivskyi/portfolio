@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import WorkItem from '../work-item/work-item';
 
 const WorksList = ({ list }) => {
